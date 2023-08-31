@@ -13,14 +13,6 @@ typedef struct node ** PPNODE;
 
 void InsertFirst(PPNODE head, int no)
 {
-    // Allocate memory for node (dynamically)
-    // Initialise that node
-
-    // Check whether LL is empty or not
-    // If LL is empty then new node is the first node so update its address in first pointer through head
-
-    // If LL is not empty then store the address of first node in the next pointer of our new node
-    // update the first pointer thruogh head
     PNODE newn = NULL;
 
     newn = (PNODE)malloc(sizeof(NODE));     // newn = (struct node *)malloc(12);
@@ -41,15 +33,6 @@ void InsertFirst(PPNODE head, int no)
 
 void InsertLast(PPNODE head, int no)
 {
-    // Allocate memory for node (dynamically)
-    // Initialise that node
-
-    // Check whether LL is empty or not
-    // If LL is empty then new node is the first node so update its address in first pointer through head
-
-    // If LL is not empty then
-    // travel till last node of LL
-    // store address of new node in the next pointer of last node
 
     PNODE newn = NULL;
     PNODE temp = NULL;
@@ -103,10 +86,6 @@ int Count(PNODE head)
 
 void DeleteFirst(PPNODE head)
 {
-    // If LL is empty then return
-    // If LL contains atleast one node then
-    // Store the address of second node in the first pointer through head
-    // And delete the fisrt node
     PNODE temp = NULL;
 
     if(*head == NULL)   // LL is empty
@@ -123,9 +102,6 @@ void DeleteFirst(PPNODE head)
 
 void DeleteLast(PPNODE head)
 {
-    // If LL is empty then return
-    // If LL contains one node then delete that node and return
-    // If LL contains more than one node then travel till second last node and delete last node
 
     PNODE temp = NULL;
 
@@ -153,11 +129,6 @@ void DeleteLast(PPNODE head)
 
 void InsertAtPos(PPNODE head, int no, int pos)
 {
-    // Consider no of nodes are 4
-
-    // If position is invalid then return directly (< 1  OR > 5)
-    // If position is 1 then call insertfirst
-    // If position is N+1 then call Insertlast  (position is 5)
 
     int size = 0, iCnt = 0;
     PNODE newn = NULL;
